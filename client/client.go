@@ -149546,6 +149546,7 @@ type AppsJscode2sessionResponse struct {
   Error *int64 `json:"error,omitempty" xml:"error,omitempty" require:"true"`
   Unionid *string `json:"unionid,omitempty" xml:"unionid,omitempty"`
   AnonymousOpenid *string `json:"anonymous_openid,omitempty" xml:"anonymous_openid,omitempty"`
+  BindingDanmuOpenid *string `json:"binding_danmu_openid,omitempty" xml:"binding_danmu_openid,omitempty"`
   Errcode *int64 `json:"errcode,omitempty" xml:"errcode,omitempty"`
   SessionKey *string `json:"session_key,omitempty" xml:"session_key,omitempty"`
   Errmsg *string `json:"errmsg,omitempty" xml:"errmsg,omitempty"`
@@ -149581,6 +149582,11 @@ func (s *AppsJscode2sessionResponse) SetUnionid(v string) *AppsJscode2sessionRes
 
 func (s *AppsJscode2sessionResponse) SetAnonymousOpenid(v string) *AppsJscode2sessionResponse {
   s.AnonymousOpenid = &v
+  return s
+}
+
+func (s *AppsJscode2sessionResponse) SetBindingDanmuOpenid(v string) *AppsJscode2sessionResponse {
+  s.BindingDanmuOpenid = &v
   return s
 }
 
